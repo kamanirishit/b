@@ -1,0 +1,21 @@
+class Trex{
+  constructor(x,y,width,height,a){
+    this.x=x;
+    this.y=y;
+    this.width=width;
+    this.height=height;
+    this.image=a;
+    this.img=loadImage(this.image);
+    this.gravity=3.5;
+    this.velocity=160;
+  }
+  display(){
+    image(this.img,this.x,this.y,this.width,this.height);
+  }
+  move1(){
+    this.y=this.y+this.gravity;
+  }
+  move2(){
+    this.y=this.y-this.velocity;
+  }
+}
